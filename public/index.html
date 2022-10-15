@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      window.onload = function() {
+        const litCalendar = document.querySelector('lit-calendar');
+
+        litCalendar.addEventListener('date-changed', (event) => {
+         console.log(`Date Changed:, ${event.detail.date}`);
+        });
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- <alert></alert> -->
+    <!-- <action-button foo="bar"></action-button> -->
+    <text-box id="info" content="Hello"></text-box>
+    <lit-calendar  date="02-23-2021" 
+      config='{"theme":"primary","allowFutureMonths":false}'
+      display-years="[2017, 2018, 2019, 2020, 2021, 2022]">
+    </lit-calendar>
+  </body>
+</html>
